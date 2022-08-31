@@ -25,21 +25,3 @@ function alldata(request, response) {
     response.send(poke);
 }
 
-app.get('/poke/:title/', searchElement);
-  
-function searchElement(request, response) {
-    var word = request.params.title;
-    word = word.charAt(0).toUpperCase()
-        + word.slice(1).toLowerCase();
-       
-    if(poke[word]) {
-        var reply = poke[word];         
-    }
-    else {
-        var reply = {
-            status:"Not Found"
-        }
-    }
-       
-    response.send(reply);
-}
