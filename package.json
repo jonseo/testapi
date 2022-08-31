@@ -1,0 +1,15 @@
+{
+  "name": "apitest",
+  "version": "1.0.0",
+  "description": "Small test api for hines and I to use",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "na"
+  },
+  "author": "EksMan",
+  "license": "ISC"
+}
