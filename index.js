@@ -17,23 +17,23 @@ app.use(express.static('public'));
 app.use(cors());
 
 // when get request is made, alldata() is called
-app.get('/elements', alldata);
+app.get('/poke', alldata);
   
 function alldata(request, response) {
       
     // Returns all information about the elements
-    response.send(elements);
+    response.send(poke);
 }
 
-app.get('/elements/:element/', searchElement);
+app.get('/poke/:title/', searchElement);
   
 function searchElement(request, response) {
-    var word = request.params.element;
+    var word = request.params.title;
     word = word.charAt(0).toUpperCase()
         + word.slice(1).toLowerCase();
        
-    if(elements[word]) {
-        var reply = elements[word];         
+    if(poke[word]) {
+        var reply = poke[word];         
     }
     else {
         var reply = {
