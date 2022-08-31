@@ -1,4 +1,4 @@
-import fs from 'fs';
+var fs = require('fs');
 
 // json file with the data
 var data = fs.readFileSync('poke2.json');

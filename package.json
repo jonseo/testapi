@@ -1,16 +1,20 @@
 {
-  "name": "apitest",
+  "name": "eksmanapi",
   "version": "1.0.0",
-  "description": "Small test api for hines and I to use",
+  "description": "xx",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node index.js"
+    "start": "start index.js"
   },
   "repository": {
     "type": "git",
-    "url": "na"
+    "url": "git+https://github.com/Jrekse/eksmanapi.git"
   },
-  "author": "EksMan",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jrekse/eksmanapi/issues"
+  },
+  "homepage": "https://github.com/Jrekse/eksmanapi#readme"
 }
