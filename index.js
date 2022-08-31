@@ -3,7 +3,7 @@ import fs from 'fs';
 // json file with the data
 var data = fs.readFileSync('poke2.json');
 
-var elements = JSON.parse(data);
+var poke = JSON.parse(data);
 const express = require("express");
 const app = express();
   
