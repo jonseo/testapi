@@ -10,6 +10,7 @@ var color = JSON.parse(colorData)
 const express = require("express");
 const app = express();
 const cors=require('cors');
+const { type } = require('os');
 app.listen(process.env.PORT, 
 
   () => console.log("Server Start at the Port")
@@ -17,6 +18,9 @@ app.listen(process.env.PORT,
 );
 app.use(express.static('public'));
 app.use(cors());
+
+console.log(typeof {color})
+console.log(typeof {poke})
 
 // Poke request and serve
 app.get('/poke', pokeDataf);
@@ -37,6 +41,6 @@ function colorDataf(request, response) {
 app.get('/all', allDataf);
 function allDataf(request, response) {
 
-  response.send(color + " " + poke)
+  response.send({color} + " " + {poke})
 
 }
