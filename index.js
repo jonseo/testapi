@@ -37,6 +37,6 @@ function colorDataf(request, response) {
 app.get('/all', allDataf);
 function allDataf(request, response) {
 
-  response.send(color, poke)
+  response.send(color + poke)
 
 }
