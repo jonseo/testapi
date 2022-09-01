@@ -33,3 +33,10 @@ function colorDataf(request, response) {
   response.send(color)
 
 }
+
+app.get('/all', allDataf);
+function allDataf(request, response) {
+
+  response.send(color, poke)
+
+}
