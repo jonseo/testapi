@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>API tester</title>
+    </head>
+    <body>
+
+        <div class="search box">
+            
+            <input type="search" placeholder="What are you looking for?" name="searchAll" id="searchBox">
+            <button class='searchbtn' type="submit" >Search</button>
+
+            <div class="searchResults"></div>
+
+        </div>
+
+        <div class="colors box">
+
+            <ul id="colorList"></ul>
+
+        </div>
+
+        <div class="poke box">
+
+            <ul id="pokeList"></ul>
+
+        </div>
+
+        <div class="all box">
+
+            <ul id="allList"></ul>
+
+        </div>
+
+        <div class="post box">
+
+            <div class="typeSelect">
+
+                <p class="question">Select a submission type</p>
+
+                <p><input type="radio" name="Radio" id="pokeRadio">Poke</p>
+
+                <p><input type="radio" name="Radio" id="colorRadio">Color</p>
+
+            </div>
+
+            <input type="text" name="title-color" id="title-color" placeholder="Title or Color name">
+
+            <input type="text" name="hex-url" id="hex-url" placeholder="Color Hex or Image Url">
+
+            <br>
+
+            <br>
+            
+            <button type="submit" onclick='addDataSelector()'>Create</button>
+
+        </div>
+
+        <div class="put box"></div>
+
+        <div class="delete box"></div>
+
+        <script src="functions.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+body{
+    display: grid;
+    padding: 40px;
+    text-align: center;
+    grid-template-areas: 
+        'one one'
+        'two three'
+        'four five'
+        'six seven'
+    ;
+}
+.box{
+    border: 2px solid black;
+    min-width: 20px;
+    min-height: 20px;
+}
+.search{
+    grid-area: one;
+}
+.colors{
+    grid-area: two;
+}
+.poke{
+    grid-area: three;
+}
+.all{
+    grid-area: four;
+}
+.post{
+    grid-area: five;
+}
+.typeSelect{
+    display: grid;
+    grid-template-areas: 
+        'q q'
+        'pradio cradio'
+    ;
+}
+.question{
+    grid-area: q;
+}
+#pokeRadio{
+    grid-area: pradio;
+}
+#colorRadio{
+    grid-area: cradio;
+}
+.put{
+    grid-area: six;
+}
+.delete{
+    grid-area: seven;
+}
+
+#searchBox{
+    width: 70%;
+    margin: 10px;
+}
