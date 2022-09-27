@@ -1,5 +1,8 @@
 var all = document.getElementById('allList')
 
+var ammo = document.getElementById('ammoList')
+// var ammoSelect = document.getElementById('ammoRadio')
+
 var poke = document.getElementById('pokeList')
 var pokeSelect = document.getElementById('pokeRadio')
 
@@ -72,6 +75,26 @@ fetch('https://eksmanapi.herokuapp.com/colors').then(function (response) {
 
 });
 
+fetch('https://eksmanapi.herokuapp.com/ammo').then(function (response) {
+	
+	return response.json();
+
+}).then(function (data) {
+	
+    data.forEach((item) => {
+
+        colorData.push(item.title)
+
+    })
+
+    display()
+
+}).catch(function (err) {
+
+	console.warn('Something went wrong.', err);
+
+});
+
 function display(){
 
     pokeData.forEach((item) => {
@@ -90,6 +113,15 @@ function display(){
         li.innerText = item;
 
         color.appendChild(li);
+
+    });
+    ammoData.forEach((item) => {
+
+        let li = document.createElement("li");
+
+        li.innerText = item;
+
+        ammo.appendChild(li);
 
     });
     allData.forEach((item) => {
