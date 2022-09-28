@@ -3,6 +3,8 @@ var all = document.getElementById('allList')
 var ammo = document.getElementById('ammoList')
 // var ammoSelect = document.getElementById('ammoRadio')
 
+var Lammo = document.getElementById('LammoList')
+
 var poke = document.getElementById('pokeList')
 var pokeSelect = document.getElementById('pokeRadio')
 
@@ -14,6 +16,10 @@ let allData = []
 let pokeData = []
 
 let colorData = []
+
+let ammoData = []
+
+let limitedAmmoData = []
 
 fetch('https://eksmanapi.herokuapp.com/all').then(function (response) {
 
@@ -83,7 +89,27 @@ fetch('https://eksmanapi.herokuapp.com/ammo').then(function (response) {
 	
     data.forEach((item) => {
 
-        colorData.push(item.title)
+        ammoData.push(item.title)
+
+    })
+
+    display()
+
+}).catch(function (err) {
+
+	console.warn('Something went wrong.', err);
+
+});
+
+fetch('https://eksmanapi.herokuapp.com/ammo-10').then(function (response) {
+	
+	return response.json();
+
+}).then(function (data) {
+	
+    data.forEach((item) => {
+
+        limitedAmmoData.push(item.title)
 
     })
 
@@ -122,6 +148,15 @@ function display(){
         li.innerText = item;
 
         ammo.appendChild(li);
+
+    });
+    limitedAmmoData.forEach((item) => {
+
+        let li = document.createElement("li");
+
+        li.innerText = item;
+
+        Lammo.appendChild(li);
 
     });
     allData.forEach((item) => {

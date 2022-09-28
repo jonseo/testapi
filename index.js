@@ -40,12 +40,17 @@ function colorDataf(request, response) {
   response.send(color)
 }
 
-app.get('/ammo', ammoDataf);
-function ammoDataf(request, response) {
+app.get('/ammo', ammoDataf)
+function ammoDataf(request, response){
   response.send(ammo)
+}
+app.get('/ammo-10', LammoDataf)
+function LammoDataf(request, response){
+  var Lammo = ammo.slice(0, 9)
+  response.send(Lammo)
 }
 
 app.get('/all', allDataf);
 function allDataf(request, response) {
-  response.send([color, poke])     
+  response.send([color, poke, ammo])     
 }

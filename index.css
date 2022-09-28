@@ -7,6 +7,7 @@ body{
         'two three'
         'four five'
         'six seven'
+        'eight nine'
     ;
 }
 .box{
@@ -28,6 +29,12 @@ body{
 }
 .post{
     grid-area: five;
+}
+.Lammo{
+    grid-area: eight;
+}
+.ammo{
+    grid-area: nine;
 }
 .typeSelect{
     display: grid;
