@@ -101,7 +101,7 @@ fetch('https://eksmanapi.herokuapp.com/ammo').then(function (response) {
 
 });
 
-fetch('https://eksmanapi.herokuapp.com/ammo-10').then(function (response) {
+fetch('https://eksmanapi.herokuapp.com/ammo-20').then(function (response) {
 	
 	return response.json();
 
