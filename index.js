@@ -10,6 +10,12 @@ var color = JSON.parse(colorDataj)
 var ammoDataj = fs.readFileSync('ammo.json');
 var ammo = JSON.parse(ammoDataj)
 
+var treestand = fs.readFileSync('treestand.json')
+var tree = JSON.parse(treestand)
+
+var jacketData = fs.readFileSync('jacket.json')
+var jacket = JSON.parse(jacketData)
+
 // deal with dependencies etc
 const express = require("express");
 const app = express();
@@ -68,4 +74,14 @@ app.get('/ammo-30', LammoDataf)
 function LammoDataf(request, response){
   var Lammo = ammo.slice(20, 29)
   response.send(Lammo)
+}
+
+app.get("/treestand", treeData)
+function treeData(request, response){
+  response.send(tree)
+}
+
+app.get("/jacket", jacketFunc)
+function jacketFunc(request, response){
+  response.send(jacket)
 }
