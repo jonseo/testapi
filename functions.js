@@ -21,7 +21,7 @@ let ammoData = []
 
 let limitedAmmoData = []
 
-fetch('https://eksmanapi.herokuapp.com/all').then(function (response) {
+fetch('https://cusapi.netlify.app/all').then(function (response) {
 
 	return response.json();
 
@@ -43,7 +43,7 @@ fetch('https://eksmanapi.herokuapp.com/all').then(function (response) {
 
 });
 
-fetch('https://eksmanapi.herokuapp.com/poke').then(function (response) {
+fetch('https://cusapi.netlify.app/poke').then(function (response) {
 
 	return response.json();
 
@@ -61,7 +61,7 @@ fetch('https://eksmanapi.herokuapp.com/poke').then(function (response) {
 
 });
 
-fetch('https://eksmanapi.herokuapp.com/colors').then(function (response) {
+fetch('https://cusapi.netlify.app/colors').then(function (response) {
 	
 	return response.json();
 
@@ -81,7 +81,7 @@ fetch('https://eksmanapi.herokuapp.com/colors').then(function (response) {
 
 });
 
-fetch('https://eksmanapi.herokuapp.com/ammo').then(function (response) {
+fetch('https://cusapi.netlify.app/ammo').then(function (response) {
 	
 	return response.json();
 
@@ -101,7 +101,7 @@ fetch('https://eksmanapi.herokuapp.com/ammo').then(function (response) {
 
 });
 
-fetch('https://eksmanapi.herokuapp.com/ammo-20').then(function (response) {
+fetch('https://cusapi.netlify.app/ammo-20').then(function (response) {
 	
 	return response.json();
 
